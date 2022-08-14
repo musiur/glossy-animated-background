@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .container {
+            padding: 3rem;
+            margin: 3rem;
+            border: 1px solid #585858;
+            width: 100%;
+            min-height: 60vh;
+            border-radius: 10px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back_color1,
+        .back_color2,
+        .back_color3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+
+            animation: pulse 8s infinite;
+            box-shadow: 0px 0px 50px #0b8a0b;
+        }
+
+        .back_color1 {
+            background-color: #07a507;
+            margin-left: 50%;
+            margin-top: 2%;
+        }
+
+        .back_color2 {
+            background-color: #002400;
+            margin-top: 50%;
+            margin-left: 40%;
+        }
+
+        .back_color3 {
+            background-color: #5dff5d;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+
+        .glass {
+            margin: 3rem;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+
+            padding: 5rem;
+
+            /* From https://css.glass */
+            background: #e1e1e163;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px #0000001a;
+            backdrop-filter: blur(7.4px);
+            -webkit-backdrop-filter: blur(7.4px);
+            border: 1px solid #e1e1e14d;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .message {
+            color: black;
+            font-weight: bolder;
+            font-size: 80px;
+        }
+
+        @keyframes pulse {
+            0% {
+                background-color: #001F3F;
+            }
+
+            33% {
+                background-color: #ffc936;
+            }
+
+            66% {
+                background-color: #26ee52;
+            }
+
+            100% {
+                background-color: #001F3F;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="back_color1"></div>
+        <div class="back_color2"></div>
+        <div class="back_color3"></div>
+        <div class="glass">
+            <div class="message">HEY VRO!</div>
+        </div>
+    </div>
+</body>
+
+</html>
